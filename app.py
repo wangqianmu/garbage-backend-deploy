@@ -18,7 +18,10 @@ UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 MODEL_PATH = BASE_DIR / "resnet50_garbage_last2.pth"
 
 # 这里不写死，后面在 Render 环境变量里配置
-MODEL_URL = os.getenv("MODEL_URL", "")
+MODEL_URL = os.getenv(
+    "MODEL_URL",
+    "https://github.com/wangqianmu/garbage-backend-deploy/releases/download/v1.0/resnet50_garbage_last2.pth"
+)
 
 CLASS_NAMES = ["hazardous", "kitchen", "other", "recyclable"]
 NAME_MAP = {
